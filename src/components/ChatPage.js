@@ -1,5 +1,6 @@
 import React from "react";
 import Message from "./Message";
+import ScrollToView from "./ScrollToView";
 
 export default function ChatPage({ allMessages }) {
   const renderMessages = allMessages.map((message) => (
@@ -8,7 +9,10 @@ export default function ChatPage({ allMessages }) {
 
   return (
     <div className="page">
-      <div className="chat-section">{renderMessages}</div>
+      <div className="chat-section">
+        {renderMessages}
+        <ScrollToView messages={allMessages} />
+      </div>
     </div>
   );
 }
