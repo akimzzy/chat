@@ -48,6 +48,7 @@ body,
   height: 100%;
   width: 100%;
   background: url(./images/chat_bg.png);
+  pointer-events: none;
   background-attachment: fixed;
   z-index: 0;
   opacity: 0.1;
@@ -88,7 +89,7 @@ body,
   content: " ";
   position: absolute;
   height: 100%;
-  width: .7rem;
+  width: 0.7rem;
   top: 0px;
   /* border-radius: 50%; */
   z-index: 10000;
@@ -117,7 +118,7 @@ body,
 .type-area {
   border-radius: 20px;
   padding: 1rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
   flex: 0 0 10%;
   display: flex;
   align-items: center;
@@ -185,7 +186,7 @@ body,
     margin: 2rem 1rem;
   }
   .page {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
   .bot-message .wrapper {
     margin-right: 2rem;
@@ -201,9 +202,8 @@ body,
   }
 
   .type-area button {
-    border-radius: 0.7rem;
-
-    padding: 0.5rem;
+    display: none;
+    visibility: hidden;
   }
 
   .type-area input {

@@ -4,8 +4,8 @@ export default function ScrollToView({ messages }) {
   const bottom = useRef(null);
 
   const scrollToBottom = () => {
-    document.querySelector(".type-area").querySelector('input').focus();
-    bottom.current?.scrollIntoView({ behavior: "smooth" });
+    bottom.current?.scrollIntoView();
+    document.querySelector(".type-area").querySelector("input").focus();
   };
 
   useEffect(() => scrollToBottom(), [messages]);
